@@ -1,0 +1,83 @@
+.skills-section {
+ position: relative;
+  
+  min-height: 100vh;
+  padding: 140px 20px 100px;
+  background:
+    linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.9)),
+    url('/skills.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 80px 20px;
+  
+      opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-in-out forwards;
+    
+}
+
+.skills-title {
+    font-family: 'Press Start 2P', serif;
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 2rem;
+}
+
+.skills-container {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
+  font-family: monospace;
+}
+
+.skill-group {
+  background: white;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  min-width: 250px;
+}
+
+.skill-group h3 {
+  font-size: 1.2rem;
+  color: #1e40af;
+  margin-bottom: 1rem;
+}
+
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.skill-badges span {
+  background-color: #e0f2fe;
+  color: #1d4ed8;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

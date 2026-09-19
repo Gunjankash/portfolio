@@ -1,0 +1,96 @@
+.talks-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 140px 20px 100px;
+  background:
+    linear-gradient(to right, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.95)),
+    url('/about.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.talks-title {
+  font-family: "Press Start 2P", serif;
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 2rem;
+}
+
+.talks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* ------------------------ Flip Card Styling ------------------------ */
+
+.talk-card {
+  perspective: 1000px;
+  width: 100%;
+  height: 300px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.talk-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: monospace;
+}
+
+.card-back {
+  background: #fef9f9;
+  transform: rotateY(180deg);
+  align-items: center;
+  justify-content: center;
+}
+
+.card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

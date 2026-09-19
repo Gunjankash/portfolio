@@ -1,0 +1,177 @@
+.navbar {
+  width: 100%;
+  background: rgba(240, 248, 255, 0.85); /* translucent sky blue */
+  backdrop-filter: blur(8px); /* frosted glass look */
+  padding: 16px 40px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  font-family: "Press Start 2P", serif;
+  transition: all 0.4s ease;
+  border-bottom: 2px dashed #c4d7ec;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar-title {
+  color: #5746af; /* soft purple */
+  font-size: 1.2rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #1e293b;
+  background: transparent;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 0.75rem;
+  position: relative;
+}
+
+/* Glowy hover effect */
+.nav-item:hover {
+  background-color: #d8eafe;
+  color: #1d4ed8;
+  transform: scale(1.08);
+  box-shadow: 0 0 5px #bae6fd, 0 0 15px #93c5fd;
+}
+
+/* Active link */
+.nav-item.active {
+  background-color: #fbcfe8;
+  color: #9d174d;
+  font-weight: bold;
+  transform: scale(1.1);
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+/* About main tab */
+.dropbtn {
+  background: transparent;
+  border: none;
+  font-size: 0.75rem;
+  color: #1e293b;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Press Start 2P", serif;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for About tab like others */
+.dropbtn:hover {
+  background-color: #d8eafe;
+  color: #1d4ed8;
+  transform: scale(1.08);
+  box-shadow: 0 0 5px #bae6fd, 0 0 15px #93c5fd;
+}
+
+/* Dropdown box */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  top: 2.8rem;
+  min-width: 180px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+/* Dropdown items styled like nav-item */
+.dropdown-content a {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  font-size: 0.75rem;
+  color: #1e293b;
+  text-decoration: none;
+  font-family: "Press Start 2P", serif;
+  transition: all 0.3s ease;
+}
+
+/* Dropdown hover effect like nav-item */
+.dropdown-content a:hover {
+  background-color: #d8eafe;
+  color: #1d4ed8;
+  transform: scale(1.08);
+  box-shadow: 0 0 5px #bae6fd, 0 0 15px #93c5fd;
+  border-radius: 8px;
+}
+
+/* Dropdown visible on hover */
+.dropdown:hover .dropdown-content,  
+.dropdown-content:hover {
+  display: block;
+}
+
+/* Optional: active style inside dropdown too */
+.dropdown-content .active {
+  background-color: #fbcfe8;
+  color: #9d174d;
+  font-weight: bold;
+  transform: scale(1.1);
+}
+
+.dropdown-link {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 0.75rem;
+  color: #1e293b;
+  text-decoration: none;
+  font-family: "Press Start 2P", serif;
+  transition: all 0.3s ease;
+}
+
+.dropdown-link:hover {
+  background-color: #d8eafe;
+  color: #1d4ed8;
+  transform: scale(1.08);
+  box-shadow: 0 0 5px #bae6fd, 0 0 15px #93c5fd;
+  border-radius: 8px;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

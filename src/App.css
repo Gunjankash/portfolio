@@ -1,0 +1,67 @@
+/* Make the root container take full screen width */
+* {
+  box-sizing: border-box;
+  
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+        
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#root {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+/* Smooth scroll for anchor links (like #about, #projects) */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global body styles */
+
+ body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('/Pixel_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #1e293b;
+}
+
+
+/* Remove Vite boilerplate styles */
+.logo {
+  display: none; /* Hiding demo logo stuff */
+}
+
+.card {
+  display: none;
+}
+
+.read-the-docs {
+  display: none;
+}
+
+/* Scroll offset for fixed navbar */
+.hero-section,
+.about-section,
+.projects-section,
+.skills-section,
+.resume-section,
+.contact-section {
+  scroll-margin-top: 100px;
+  
+}
